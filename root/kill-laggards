@@ -1,0 +1,4 @@
+#!/bin/bash
+# quick script to kill zombies
+ps aux | grep perl | perl -aE 'kill -14, $F[1]'
+ps aux | grep perl
