@@ -6026,7 +6026,6 @@ Bundle::WING
 Bundle::WWW::Mechanize::Shell
 Bundle::WWW::Scraper::Housing
 Bundle::WWW::Scraper::ISBN::Drivers
-Bundle::WWW::Search::Scraper::Housing
 Bundle::WeBWorK
 Bundle::WebDyne
 Bundle::Wizard
