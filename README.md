@@ -15,7 +15,14 @@ Instructions
 7. `/root/smoke`
 8. Watch reports appear in `/root/.cpanreporter/reports`.
 
-... if a dist breaks the smoke process, add it to `root/.cpan/prefs/01.DISABLED.yml` :-)
+Troubleshooting
+---------------
+If a distribution prompts for input and doesn't timeout after 5 seconds, or a test hangs:
+1. Copy the name of the distribution
+2. Shell into the container and run `/root/kill-laggards` to skip the install
+3. Add the distribution to `root/.cpan/prefs/01.DISABLED.yml`
+4. Copy the updated file into the container, incase another distribution cites it as a dependency: `docker cp root/.cpan/prefs/01.DISABLED.yml $PID:/root/.cpan/prefs/01.DISABLED.yml`
+
 
 Copyright 2021 David Farrell
 
