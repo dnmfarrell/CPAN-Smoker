@@ -249,6 +249,7 @@ match:
     |PEVANS/IPC-PerlSSH-Async-\d             # asks for a password during testing
     |PEVANS/IPC-PerlSSH-\d                   # asks for a password during testing
     |PEVANS/IO-Async-Loop-Glib-0.20          # hangs after t/12share-timer.t (in t/15share-child.t)
+    |PEVANS/Net-Async-Tangence-0.15.tar.gz   # hangs if IO::Async::Loop is not installed
     |PFARR/Net-SMS-Clickatell-SOAP-
     |PHILIPS/DBIx-MyParse-\d                 # too complicated to set up (mysql source etc.)
     |PHISH/XML-LibXML-Common-0.13.tar.gz     # could cause a downgrade (yes it did)
