@@ -172,6 +172,7 @@ match:
     |JROCKWAY/AnyEvent-Retry-\d              # hangs after release-pod-syntax.t
     |JSTOWE/Term-Screen-\d                   # automated testing impossible
     |JTILLMAN/VCS-Vss-0\.20\.tar\.gz         # hangs
+    |JTOBEY/Emacs-EPL-0.7.tar.gz             # hangs
     |JWACH/xDash-1.02.tar.gz                 # hangs
     |JWIED/HTML-EP-0.2011.tar.gz             # hangs
     |JWU/RPC-Object/RPC-Object-0.31.tar.gz
