@@ -179,6 +179,7 @@ match:
     |KARMAN/Catalyst-Authentication-Store-LDAP-\d # hangs
     |KAZUHO/Parallel-Prefork-0.02            # hangs
     |KAZUHO/Server-Starter-                  # hangs
+    |KAZUHO/Starlet-                         # hangs
     |KENTNL/Path-FindDev-0.4.0.tar.gz        # http://www.cpantesters.org/cpan/report/8d9bf222-39ee-11e3-bbd4-fb49f34aa4a3
     |KIMURA/Comprss-Zlib-1.12-bin-1-Mac.tgz
     |KWILLIAMS/Apache-Filter-1.024.tar.gz    # https://rt.cpan.org/Ticket/Display.html?id=34604
