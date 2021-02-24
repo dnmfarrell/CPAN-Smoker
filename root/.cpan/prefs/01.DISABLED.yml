@@ -236,6 +236,7 @@ match:
     |MSCHILLI/GitMeta-\d                     # all Git stuff seems to hang my v5.15 smoker
     |MSCHILLI/LWP-UserAgent-POE-\d           # seems to hang
     |MSCHWERN/Test-Fork-0.01_01.tar.gz       # test hangs
+    |MSERGEANT/PPerl-0.25.tar.gz             # hangs
     |MSERGEANT/XML-miniXQL-0.04.tar.gz       # rest in peace: missing dependency decl on XML::Parser but so old (1999) that I do not want to RT it
     |MSHILTONJ/CGI-Test-\d                   # asks if it should strip Carp::Datum calls
     |MSROTH/Db-Documentum-\d                 # press return to continue...
@@ -294,6 +295,7 @@ match:
     |SPANG/App-SD-0.75.tar.gz                # hangs in test t/sd-github/basic.t
     |STEVEGT/IS-Init-0.93.tar.gz             # hangs
     |ZMAN/SPOPSx-Ginsu-0.58.tar.gz
+    |SDRABBLE/Mail-Webmail-Yahoo-0.601.tar.gz # tests ask for yahoo creds
     |SPURKIS/Agent-3.20.tar.gz               # https://rt.cpan.org/Ticket/Display.html?id=94430
     |SRI/Catalyst-Plugin-HTML-Widget-1.1.tar.gz # Module::Install 0.54 http://rt.cpan.org/Ticket/Display.html?id=40618
     |SRVANCE/P4-Server-\d                    # or maybe it was this one?
@@ -329,6 +331,7 @@ match:
     |VPARSEVAL/Mail-MboxParser-0.55.tar.gz   # hangs during some test
     |VPIT/Acme-CPANAuthors-You-re_using-
     |WONKO/CGI-Application-Dispatch          # endless loop
+    |WORENKD/Log-ErrLogger-1.5.tar.gz        # hangs
     |WSMITH/RPC-Oracle-\d                    # asks username for Oracle
     |WSMITH/Email-Folder-Exchange-\d         # asks questions
     |WWOLF/Test-0.001.                       # suggested by Slaven
