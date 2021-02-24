@@ -330,6 +330,7 @@ match:
     |VIPUL/Concurrent-Object-1.07.tar.gz     # test hang
     |VPARSEVAL/Mail-MboxParser-0.55.tar.gz   # hangs during some test
     |VPIT/Acme-CPANAuthors-You-re_using-
+    |WBRASWELL/RPerl-                        # slow tests
     |WONKO/CGI-Application-Dispatch          # endless loop
     |WORENKD/Log-ErrLogger-1.5.tar.gz        # hangs
     |WSMITH/RPC-Oracle-\d                    # asks username for Oracle
