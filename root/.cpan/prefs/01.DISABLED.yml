@@ -333,6 +333,7 @@ match:
     |WBRASWELL/RPerl-                        # slow tests
     |WONKO/CGI-Application-Dispatch          # endless loop
     |WORENKD/Log-ErrLogger-1.5.tar.gz        # hangs
+    |WROG/Mojo-Promise-Role-Repeat-0.006.tar.gz # hangs
     |WSMITH/RPC-Oracle-\d                    # asks username for Oracle
     |WSMITH/Email-Folder-Exchange-\d         # asks questions
     |WWOLF/Test-0.001.                       # suggested by Slaven
