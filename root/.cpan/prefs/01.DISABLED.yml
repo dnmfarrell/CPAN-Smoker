@@ -201,6 +201,7 @@ match:
     |LARRYL/WebService-ScormCloud-\d         # asks for an ID
     |LBAXTER/Openview-Message-0.03.tar.gz
     |LBROCARD/Devel-ebug-HTTP-0.32           # http://rt.cpan.org/Ticket/Display.html?id=40599
+    |LBROCARD/OpenFrame-Segment-Apache-1.20.tar.gz # hangs
     |LDS/Bio-SamTools-\d                     # requires non-CPAN prereq
     |LDS/AcePerl-                            # requires ACEDB OO database
     |LEOCHARRE/WWW-Autosite-                 # asks question, does not use prompt RT 35081
