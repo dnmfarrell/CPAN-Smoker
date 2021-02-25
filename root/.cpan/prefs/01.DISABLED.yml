@@ -65,8 +65,7 @@ match:
     |BFREE/OpenGL-Image-\d
     |BFREE/OpenGL-\d
     |BHODGES/Mail-IMAPFolderSearch-0.03.tar.gz
-    |BINGOS/POE-Component-SmokeBox-          # hangs
-    |BINGOS/POE-1.368.tar.gz                 # fails to install, slow to build
+    |[A-Z]+/POE-                             # POE takes forever to build, fails to install
     |BKCHAPIN/DBIx-Perform-\d                # curses login (?)
     |BLX/XSDSQL_                             # hangs with high memory usage
     |BOBTFISH/Catalyst-Authentication-Store-LDAP-\d # hangs
@@ -104,7 +103,6 @@ match:
     |DUFF/Module-Install-RPM-0.01            # see https://rt.cpan.org/Ticket/Display.html?id=67027
     |EBRUNI/WWW-BBB-API-\d                   # asks questions
     |ECALDER/Proc-PID-File-1.24.tar.gz       # hangs during test.pl
-    |ECALDER/POE-Component-Child-1.39        # hangs during test
     |EDALY/Text-GenderFromName-0.32.tar.gz   # bad prompt
     |EDAVIS/xmltv-0.5.33.tar.gz              # http://matrix.cpantesters.org/?dist=xmltv+0.5.33
     |EDMONSON/Games-Rezrov-0.15.tar.gz       # launches zork!
@@ -131,19 +129,15 @@ match:
     |GRICHTER/Embperl-2.5.0.tar.gz           # loops on apache src
     |GRICHTER/HTML-Embperl-1.3.6.tar.gz      # loops on apache src
     |GRM/
-    |GRODITI/POE-Component-DirWatch-\d       # the 03editedfile or so seems to take forever
     |GSEAMAN/XML-DB.tar.gz                   # hangs
     |GSLONDON/Tk-CanvasLogo-0.2.tar.gz
     |GUGOD/Acme-Tests-                       # tests run an interactive trivia quiz
     |GUIMARD/Net-Server-Mail-\d              # hangs
-    |/POE-Quickie-\d                          # test hangs
-    |GWYN/POE-Component-Server-HTTP-KeepAlive-0.0307.tar.gz # https://rt.cpan.org/Ticket/Display.html?id=82020
     |HACKER/Agent-TCLI-                      # hangs
     |HANENKAMP/Bot-Net-0.1.0                 # hangs during test t/TestNet/t/atoz-peer.t
     |HDIAS/Mail-Salsa-\d                     # hangs/asks for installation directory
     |HERNAN/Catalyst-Example-InstantCRUDStylish- # uninterruptible and demanding but maybe not his fault
     |HESCO/LedgerSMB-API-\d                  # 0.04a nearly unstoppable endless loop
-    |HEYTRAV/POE-Filter-Hessian-\d           # hangs
     |HOLOWAY/Catalyst-Log-Log4perl-1.00.tar.gz # endless loop with deep recursion
     |HOOO/X3D-0                              # hangs at t/nodefield_sfdouble_06 on perl-5.10.0 at 33955
     |HOPCROFTS/Nagios-WebTransact-\d         # asks for a server and port
@@ -187,7 +181,6 @@ match:
     |KENTNL/Path-FindDev-0.4.0.tar.gz        # http://www.cpantesters.org/cpan/report/8d9bf222-39ee-11e3-bbd4-fb49f34aa4a3
     |KIMURA/Comprss-Zlib-1.12-bin-1-Mac.tgz
     |KWILLIAMS/Apache-Filter-1.024.tar.gz    # https://rt.cpan.org/Ticket/Display.html?id=34604
-    |KESTEB/POE-Component-Client-Stomp-0.05.tar.gz # hangs in t/02_basic.t with 5.10 proper
     |KMACLEOD/XML-Grove-0.46alpha.tar.gz     # (1999) seems to be unmaintained
     |KMX/Alien-IUP-v?\d                      # not analysed slowness and CPU hog; then again questions being asked
     |KNI/IPC-MPS-\d                          # asks questions
@@ -248,8 +241,6 @@ match:
     |MWS/ResourcePool-Resource-SOAP-Lite-\d  # asks questions
     |NEKOKAK/CGI-Application-Plugin-DebugScreen-0 # hangs on some perls (5.10.1 I think)
     |NPEREZ/Reflexive-Stream-Filtering-1.103450 # hangs or fails; unrelated RT 74010
-    |NUFFIN/POE-Component-Supervisor-0.01.tar.gz # hangs during t/04_global_restart_policy.
-    |NUFFIN/POE-Component-Supervisor-0.02.tar.gz # hangs during t/04_global_restart_policy. for some of our maint-5.8
     |NWCLARK/perl-                           # pumpkin
     |NXADM/App-Unix-RPasswd-\d               # takes too much time, no idea what it does
     |OALDERS/URI-ParseSearchString-More-0.04
@@ -267,7 +258,6 @@ match:
     |PMIC/parrot-0.5.3.tar.gz                # hangs after testing ctags
     |RAM/kit-2.0.38.tar.gz
     |RBDAVISON/XML-API-WIX2-0.02.tar.gz
-    |RCAPUTO/POE-Loop-Tk-1.304.tar.gz        # hangs sometimes
     |RECSKY/LWP-Simple-REST-0.092            # duplicate upload
     |REHSACK/Bundle-DBD-DBM                  # takes too many hours
     |RHANDOM/Template-Alloy-XS-\d            # very hungry for memory, made amd64 unuseable
@@ -290,7 +280,6 @@ match:
     |SAPER/CPAN-Dependency-0.1[25]           # hangs in t/02internals: strace select(16, [4 8], NULL, NULL, NULL <unfinished ...>
     |SCOTT/Attribute-Persistent-1.1.tar.gz   # fails with out of memory and blocks the box for quite a while
     |SDPRICE/Linux-DVB-DVBT-Apps-QuartzPVR-\d
-    |SEGAN/POE-Component-LaDBI-1.2.1
     |SHLOMIF/XML-Grammar-Screenplay-\d       # t/to-xhtml.t took ~17 minutes
     |SIRROBERT/Set-Toolkit-0.11.tar.gz       # https://rt.cpan.org/Public/Bug/Display.html?id=67343
     |SMEE/P4-\d                              # asks for Perforce api paths
@@ -319,7 +308,6 @@ match:
     |TOKUHIROM/Amon2-                        # test hangs with some perls
     |TOKUHIROM/Moxy-\d                       # test hangs (maybe during a prereq?)
     |TOMZO/Quota-\d                          # 1.5.2 and 1.6.0 hang during test.pl
-    |TONYC/POE-XS-Loop-EPoll-\d              # asks questions
     |TPABA/
     |TTY/kurila-\d                           # asks too many questions
     |TURNERJW/
@@ -360,8 +348,6 @@ match:
     |ZENIN/Tk-MenuHash-1.12.tar.gz
     |ZIEFLE/WWW-LEO-0.01.tar.gz              # rt 34540
     |ZINIGOR/libeve-perl_0.05.orig.tar.gz    # hangs
-    |ZOFFIX/POE-Component-WWW-Google-PageRank-\d # hangs in 00-load with 34437
-    |ZOFFIX/POE-Component-WebService-HtmlKitCom-FavIconFromImage-\d # hangs
     |ZSTEVENS/Alien-ActiveMQ-\d              # downloads 50MB and leaves them in /tmp/
     )|
 disabled: 1
