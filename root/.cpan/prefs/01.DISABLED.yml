@@ -66,6 +66,7 @@ match:
     |BFREE/OpenGL-\d
     |BHODGES/Mail-IMAPFolderSearch-0.03.tar.gz
     |BINGOS/POE-Component-SmokeBox-          # hangs
+    |BINGOS/POE-1.368.tar.gz                 # fails to install, slow to build
     |BKCHAPIN/DBIx-Perform-\d                # curses login (?)
     |BLX/XSDSQL_                             # hangs with high memory usage
     |BOBTFISH/Catalyst-Authentication-Store-LDAP-\d # hangs
