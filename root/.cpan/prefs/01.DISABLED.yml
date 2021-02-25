@@ -232,6 +232,7 @@ match:
     |MOB/Forks-Super-                        # too demanding
     |MOB/Forks-Queue-                        # seems to hang the whole smoker
     |MOCK/Business-OnlinePayment-Exact-0.01.tar.gz # test prompts for ExactID
+    |MPREWITT/net-smtp-retryable/Net-SMTP-Retryable-0.0.2.tar.gz # hangs
     |MROZ/Device-Blkid-E2fsprogs-0.2[24]     # asks question without EUMM
     |MSCHILLI/GitMeta-\d                     # all Git stuff seems to hang my v5.15 smoker
     |MSCHILLI/LWP-UserAgent-POE-\d           # seems to hang
