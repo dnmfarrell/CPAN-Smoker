@@ -9,10 +9,8 @@ Instructions
 1. Install [minicpan](https://metacpan.org/pod/distribution/CPAN-Mini/bin/minicpan) and download all of CPAN.
 2. Copy your `mirrors/minicpan` dir to `./root/mirrors/minicpan`
 3. Build the docker image: `docker build -t cpan-smoker .`
-4. Create the docker container, include bash `docker create -t -i cpan-smoker bash`. Copy the SHA
-5. Start the container `docker start -a -i $SHA`. Run `docker ps` to get the container's PID
-6. Connect to the container: `docker exec -it $PID /bin/bash`
-7. `/root/smoke`
+4. Run the docker image and stop logs from eating all of your disk: `docker run -it --log-opt max-size=10m --log-opt max-file=3 cpan-smoker /bin/bash`
+7. Run `/root/smoke`
 8. Watch reports appear in `/root/.cpanreporter/reports`.
 
 Troubleshooting
