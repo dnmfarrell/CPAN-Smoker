@@ -24,6 +24,7 @@ match:
     |.+Business-PayPal-API-\d                # author writes to me he considers the test does not lend itself to automated testing
     |.*Mojolicious-Plugin-HamlRenderer       # last release 20120604, rather take MojoX-Renderer-Haml which came 2012-08-14 (the two bite each other)
     |.*/Unix-Syslog-\d                       # noisy test suite
+    |.*/Bundle-                              # bundles, no
     |.*/Alt-CPAN-Uploader-tinyua-0.000001    # not conforming installation policy as of Alt-0.19
     |.*/Alt-Module-Runtime-ButEUMM-0.001     # not conforming installation policy as of Alt-0.19
     |.*/Alt-common-sense-TOBYINK-0.001       # not conforming installation policy as of Alt-0.19
@@ -34,6 +35,7 @@ match:
     |.*/mod_perl-2.0.\d.tar.gz                 # endless loop seen with 5,6,7,9
     |.*FamilyTreeInfo                        # https://github.com/mishin/Ftree-cpan/issues/2
     |.*/XSConfig-                            # rt.cpan.org #110631
+    |.*/POE-                                 # POE takes forever to build, fails to install
     |AADLER/Inline-Octave-0.31.zip           # 
     |AMBS/Lingua/Lingua-PT-Speaker-0.10.tar.gz # does not use prompt() and no $|
     |ADAMK/Acme-Mom-Yours-\d                 # blocks the smoker for too long
@@ -65,7 +67,6 @@ match:
     |BFREE/OpenGL-Image-\d
     |BFREE/OpenGL-\d
     |BHODGES/Mail-IMAPFolderSearch-0.03.tar.gz
-    |[A-Z]+/POE-                             # POE takes forever to build, fails to install
     |BKCHAPIN/DBIx-Perform-\d                # curses login (?)
     |BLX/XSDSQL_                             # hangs with high memory usage
     |BOBTFISH/Catalyst-Authentication-Store-LDAP-\d # hangs
