@@ -146,6 +146,7 @@ match:
     |IMACAT/DbFramework-\d                   # asks questions but I have not time
     |IMACAT/arclog-3.\d                      # one test (01-exhaust) hangs with several perls
     |INA/Modern/Open/Modern-Open-\d          # Message-ID: <87zjfc7itv.fsf at cvrsnica.herceg.de>
+    |ISAACSON/Rstat-Client-2.2.tar.gz
     |ISHIGAKI/PPM-Make-\d                    # asks questions
     |IVAN/Business-OnlinePayment-eSelectPlus-\d # hangs with 5.14.0-357
     |JANL/Net-Server-0.99.6.1                # hangs
@@ -159,6 +160,7 @@ match:
     |JETTERO/Net-Pcap-Easy-\d                # asks questions
     |JETTERO/Net-IMAP-Simple-\d              # questions
     |JEZRA/Finance-TickerSymbols             # talks endlessly with some ticker sites
+    |JHIVER/TripleStore-0.03.tar.gz          # test prompts for input
     |JKRAMER/Net-Link-0.01.tar.gz            # hangs in t/00_link on 33955
     |JKUTEJ/Xen-Control-\d                   # calls sudo
     |JLMARTIN/NRD-Daemon-\d                  # hangs with 5.14.1-36
@@ -167,6 +169,7 @@ match:
     |JOENIO/Alien-SLOCCount-                 # tries and (retries) to download the lib forever
     |JOENIO/WWW-Scraper-ISBN-Siciliano_Driver-0.02.tar.gz
     |JQUELIN/WWW-DaysOfWonder-Memoir44-\d    # hangs
+    |JRED/Event-RPC-1.08.tar.gz              # hangs
     |JROCKWAY/AnyEvent-Retry-\d              # hangs after release-pod-syntax.t
     |JSTOWE/Term-Screen-\d                   # automated testing impossible
     |JTILLMAN/VCS-Vss-0\.20\.tar\.gz         # hangs
@@ -221,7 +224,7 @@ match:
     |MISHIKAL/Net-LDAPapi-\d                 # gives gooood advice and stops
     |MJD/Net-DHCP-Control-0.09.tar.gz        # https://rt.cpan.org/Ticket/Display.html?id=34536
     |MLAWREN/SQL-Tree-\d                     # hangs before the first test
-    |MLEHMANN/AnyEvent-4.232                 # hangs after "t/06_socket.....ok"
+    |MLEHMANN/AnyEvent-                      # hangs
     |MLEHMANN/Deliantra                      # looks complicated and not using CheckLib
     |MLEHMANN/PApp-1.42.tar.gz               # the autoconfiguration gets it wrong
     |MMABRY/Device-WxM2-1.03.tar.gz          # hangs
@@ -276,6 +279,7 @@ match:
     |RURBAN/C-DynaLib-0.58                   # hangs with 27040 (=5.8.8) on t/01test.t but not with others
     |RYBSKEJ/forks-0.25
     |SAKOHT/RMI-v?0.\d                       # hangs due to regression in 5.13.11-412, module is not to blame
+    |SAKOHT/UR-0.38.1.tar.gz                 # fails, tests are slow
     |SAMV/Lingua-Translate-                  # hangs often
     |SANKO/Alien-FLTK-\d                     # downloads with waiting time risk
     |SAPER/CPAN-Dependency-0.1[25]           # hangs in t/02internals: strace select(16, [4 8], NULL, NULL, NULL <unfinished ...>
@@ -305,6 +309,7 @@ match:
     |TBR/Net-RabbitMQ-Simple-0.0004          # hangs
     |TJENNESS/Chart-XMGR-0.95.tar.gz
     |TLBDK/IO-EventMux-Socket-MsgHdr-0.02.tar.gz # hangs
+    |TLBDK/IO-EventMux-                      # hangs
     |TOBYINK/App-perlrdf-0.006.tar.gz        # https://rt.cpan.org/Ticket/Display.html?id=99158
     |TOKUHIROM/Amon2-                        # test hangs with some perls
     |TOKUHIROM/Moxy-\d                       # test hangs (maybe during a prereq?)
@@ -322,6 +327,7 @@ match:
     |VIPUL/Concurrent-Object-1.07.tar.gz     # test hang
     |VPARSEVAL/Mail-MboxParser-0.55.tar.gz   # hangs during some test
     |VPIT/Acme-CPANAuthors-You-re_using-
+    |WAG/Sudo-                               # test prompt loops infinitely
     |WBRASWELL/RPerl-                        # slow tests
     |WONKO/CGI-Application-Dispatch          # endless loop
     |WORENKD/Log-ErrLogger-1.5.tar.gz        # hangs
@@ -337,6 +343,7 @@ match:
     |XANTUS/MojoX-AIO-0.02.tar.gz            # hangs
     |XERN/Bio-MedChunker-0.02.tar.gz
     |XERN/CGI-QuickApp-\d                    # hangs immediately
+    |XSAWYERX/Test-SFTP-1.10.tar.gz          # test prompts
     |YAPPO/HTTP-Engine-0.0.15.tar.gz         # hangs in test 020_interface/standalone-restart
     |YAPPO/HTTP-Engine-0.0.16.tar.gz         # ditto but not with all perls
     |YAPPO/HTTP-Engine-0.0.17.tar.gz         # and once again
