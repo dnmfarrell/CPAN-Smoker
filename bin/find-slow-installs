@@ -1,0 +1,17 @@
+#!/usr/bin/env perl
+use v5.16;
+use warnings;
+
+# reads a stream of cpan reporter .rpt filenames and prints the build time and
+# distname. Optionally filters output for dists whose buildtime > secs
+
+my $MAXTIME = shift @ARGV // 0;
+while (<>) {
+  chomp;
+  open my $fh, '<', $_ or die $!;
+  my $rpt = do { local $/;<$fh> };
+  my ($distname) = $rpt =~ /^X-Test-Reporter-Distfile: (.+)$/m;
+  my ($time) = $rpt =~ / (\d+) wallclock secs /;
+  $time //= 0;
+  say "$time\t$distname" if $time >= $MAXTIME;
+}
