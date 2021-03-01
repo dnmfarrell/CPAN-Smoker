@@ -81,7 +81,6 @@ match:
     |BSUGARS/IPC-Shareable-0.60.tar.gz       # hangs
     |CAIDAPERL/Chart-Graph-\d                # hangs Makefile.PL: RT 33541
     |CEBJYRE/Task-BeLike-Cebjyre-\d          # hangs somewhere
-    |CGARCIA/WebService-Mappoint-0.30.tar.gz # please enter your mappoint id
     |CGUINE/Games-Sudoku-SudokuTk-\d         # hangs: seen with 0.07 and 0.09
     |CHSTROSS/NetServer-Generic-1.03.tar.gz  # hangs
     |CKAISER/Term-ReadLine-TTYtter-1.4.tar.gz # "enter arithmetic expression"
@@ -123,7 +122,6 @@ match:
     |FreeHAL                                 # David Cantrell warns that it is a 137 MB thingy
     |GARY/Math-TrulyRandom-1.0.tar.gz        # https://rt.cpan.org/Ticket/Display.html?id=34693
     |GBACON/File-BSDGlob-0.94.tar.gz         # hangs (on linux?)
-    |GKNAUSS/WebService-Upcoming             # for members only
     |GMPASSOS/XML-Smart-1.3.1.tar.gz         # test prompts
     |GONERI/Ocsinventory-Agent-0.0.8.tar.gz  # hangs
     |GONERI/Ocsinventory-Agent-\d            # hanger
@@ -188,7 +186,6 @@ match:
     |KWILLIAMS/Apache-SSI-2.19.tar.gz
     |LAOMOI/XiaoI-0.01.tar.gz                # hung
     |LAOMOI/XiaoI-0.03.tar.gz                # hung
-    |LARRYL/WebService-ScormCloud-\d         # asks for an ID
     |LBAXTER/Openview-Message-0.03.tar.gz
     |LBROCARD/Devel-ebug-HTTP-0.32           # http://rt.cpan.org/Ticket/Display.html?id=40599
     |LBROCARD/OpenFrame-Segment-Apache-1.20.tar.gz # hangs
@@ -335,5 +332,111 @@ match:
     |ZENIN/Tk-MenuHash-1.12.tar.gz
     |ZINIGOR/libeve-perl_0.05.orig.tar.gz    # hangs
     |ZSTEVENS/Alien-ActiveMQ-\d              # downloads 50MB and leaves them in /tmp/
+
+    # These all took 1 minute or more to build
+    |ABERGMAN/GlbDNS-0.30.tar.gz
+    |AJNN/Neo4j-Driver-0.18.tar.gz
+    |AUTRIJUS/OurNet-BBSAgent-1.61.tar.gz
+    |BBB/File-NFSLock-1.29.tar.gz
+    |BBYRD/Dist-Zilla-PluginBundle-Prereqs-0.93.tar.gz
+    |BDARRAH/Proc-ParallelLoop-0.5.tgz
+    |BINGOS/POE-1.368.tar.gz
+    |BOB/Wiki-Toolkit-0.87.tar.gz
+    |BOUTROSLB/HPCI-0.75.tar.gz
+    |BRMILLER/LaTeXML-0.8.5.tar.gz
+    |BRUMMETT/UR-0.46.tar.gz
+    |BRUMMETT/UR-0.47.tar.gz
+    |CANID/Lock-Server-1.75.tar.gz
+    |CFRANKS/HTML-FormFu-2.07.tar.gz
+    |CHIM/Plack-Middleware-Throttle-Lite-Backend-Redis-0.04.tar.gz
+    |CHISEL/REST-Cypher-0.0.4.tar.gz
+    |CLAESJAC/Test-Harness-FileFilter-0.01.tar.gz
+    |CLEMENSG/Watchdog-0.10.tar.gz
+    |CNANDOR/Slash-Client-0.01.tar.gz
+    |CORION/HTTP-Request-FromCurl-0.25.tar.gz
+    |CPANEL/cPanel-TaskQueue-0.902.tar.gz
+    |DBUCHMAN/MegaDistro-0.01.tar.gz
+    |DBUCHMAN/MegaDistro-0.02-5.tar.gz
+    |DDB/Mail-GnuPG-0.23.tar.gz
+    |DDICK/Time-Zone-Olson-0.36.tar.gz
+    |DJZORT/Monit-HTTP-0.04.tar.gz
+    |DMUEY/Locales-0.34.tar.gz
+    |ENOOR/TaskForest/TaskForest-1.37.tar.gz
+    |ETHER/Moose-2.2014.tar.gz
+    |EXODIST/Parallel-Runner-0.013.tar.gz
+    |EXODIST/Test2-Harness-1.000042.tar.gz
+    |FELIPE/Crypt-Perl-0.34.tar.gz
+    |FELIPE/IO-Die-0.057.tar.gz
+    |FEN/XRI-0.2.4.tar.gz
+    |GFLEWIS/ServiceNow-SOAP-0.16.tar.gz
+    |GNG/ServiceNow-Simple-0.10.tar.gz
+    |GSHANK/HTML-FormHandler-0.40022.tar.gz
+    |GSHANK/HTML-FormHandler-0.40023.tar.gz
+    |GSHANK/HTML-FormHandler-0.40068.tar.gz
+    |HAARG/Catalyst-Runtime-5.90128.tar.gz
+    |HORNBURG/Marketplace-Rakuten-0.04.tar.gz
+    |IVORW/Tie-FTP-0.02.tar.gz
+    |JACOBY/Expect-1.35.tar.gz
+    |JLMARTIN/Paws-0.36.tar.gz
+    |JLMARTIN/Paws-0.38.tar.gz
+    |JLMARTIN/Paws-0.40.tar.gz
+    |JLMARTIN/Paws-0.41.tar.gz
+    |JLMARTIN/Paws-0.42.tar.gz
+    |JMCNAMARA/Excel-Writer-XLSX-1.07.tar.gz
+    |JRADCLIFF/GOOGLE-ADWORDS-PERL-CLIENT-2.13.0.tar.gz
+    |JRADCLIFF/GOOGLE-ADWORDS-PERL-CLIENT-2.15.0.tar.gz
+    |KHW/Pod-Simple-3.42.tar.gz
+    |KIMOTO/SPVM-0.0932.tar.gz
+    |KMCGRAIL/SpamAssassin/Mail-SpamAssassin-3.4.4.tar.gz
+    |LEEJO/JSON-Schema-ToJSON-0.18.tar.gz
+    |LIFEGUARD/MediaWiki-Bot-5.006003.tar.gz
+    |MAHIRO/Mail-IMAPQueue-0.04.tar.gz
+    |MELMOTHX/Text-Amuse-Compile-1.60.tar.gz
+    |MGRABNAR/File-Tail-1.3.tar.gz
+    |MILOVIDOV/Lingua-Translate-Bing-0.04.tar.gz
+    |MMCLERIC/Ubic-1.60.tar.gz
+    |MOB/Patro-0.16.tar.gz
+    |MOB/Signals-XSIG-0.15.tar.gz
+    |MONGODB/MongoDB-v2.2.2.tar.gz
+    |MRDVT/Time-HiRes-Sleep-Until-0.08.tar.gz
+    |MUDLER/Mojo-IOLoop-ReadWriteProcess-0.04.tar.gz
+    |MUIR/modules/IO-Event-0.813.tar.gz
+    |MWS/ResourcePool-Resource-Net-LDAP-1.0003.tar.gz
+    |NIGELM/HTML-FormFu-2.05.tar.gz
+    |NKH/PerlBuildSystem-0.44.tar.gz
+    |NORDAAKER/Parallol-0.3.tar.gz
+    |PAYERLE/Slurm-Sshare-1.2.2.tar.gz
+    |PERFSONAR/perfSONAR_PS-Base-
+    |PERFSONAR/perfSONAR_PS-Client-Echo-0.09.tar.gz
+    |PERLANCAR/Sys-RunAlone-Flexible-0.004.tar.gz
+    |PEVANS/IO-Async-0.78.tar.gz
+    |PFEIFFER/makepp-
+    |PJACKLAM/Math-BigInt-BitVect-1.16.tar.gz
+    |PMATTHEWS/GOOGLE-ADWORDS-PERL-CLIENT-2.12.0.tar.gz
+    |POPEFELIX/Mojo-UserAgent-Mockable-1.57.tar.gz
+    |POWERMAN/Narada-v2.3.8.tar.gz
+    |RAPPAZF/REST-Client-CrossRef-0.009.tar.gz
+    |RJBS/Cache-Cache-1.08.tar.gz
+    |ROMM/Sport-Analytics-NHL-1.53.tar.gz
+    |RYBSKEJ/forks-0.36.tar.gz
+    |RYBSKEJ/forks-BerkeleyDB-0.06.tar.gz
+    |SDRABBLE/Mail-Webmail-Yahoo-0.601.tar.gz
+    |SGLADKOV/Redis-CappedCollection-1.10.tar.gz
+    |SNEZ/OpenTracing-AutoScope-v0.106.6.tar.gz
+    |SROMANOV/Crypt-OpenPGP-1.12.tar.gz
+    |STEVEB/Module-CheckDep-Version-0.09.tar.gz
+    |STRO/Prompt-Timeout-1.03.tar.gz
+    |SZARATE/Mojo-IOLoop-ReadWriteProcess-0.28.tar.gz
+    |TIMB/Devel-NYTProf-6.06.tar.gz
+    |TOMGRACEY/TaskPipe-0.09.tar.gz
+    |VRAG/Yandex-Disk-0.07.tar.gz
+    |VVU/Proc-Launcher-0.0.37.tar.gz
+    |WBRASWELL/RPerl-7.000000.tar.gz
+    |WFANSH/Google-Ads-GoogleAds-Client-
+    |XERXES/Microsoft-AdCenter-8.11.tar.gz
+    |YANICK/Parallel-ForkManager-2.02.tar.gz
+    |YVES/Sereal-4.018.tar.gz
+    |YVES/Sereal-Encoder-4.018.tar.gz
+    |ZEFRAM/Hash-SharedMem-0.005.tar.gz
     )|
 disabled: 1
