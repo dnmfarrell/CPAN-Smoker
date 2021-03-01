@@ -8,18 +8,17 @@ Instructions
 ------------
 1. Install [minicpan](https://metacpan.org/pod/distribution/CPAN-Mini/bin/minicpan) and download all of CPAN.
 2. Copy your `mirrors/minicpan` dir to `./root/mirrors/minicpan`
-3. Build the docker image: `docker build -t cpan-smoker .`
-4. Run the docker image and stop logs from eating all of your disk: `docker run -it --log-opt max-size=10m --log-opt max-file=3 cpan-smoker /bin/bash`
+3. Build the docker image: `docker build -t cpan-smoker-v5.32.1 -f Dockerfile-v5.32.1 .`
+4. Run the docker image with no networking and stop logs from eating all of your disk: `docker run -it --network none --log-opt max-size=10m --log-opt max-file=3 cpan-smoker-v5.32.1 /bin/bash`
 7. Run `/root/smoke`
 8. Watch reports appear in `/root/.cpanreporter/reports`.
 
 Troubleshooting
 ---------------
-If a distribution prompts for input and doesn't timeout after 5 seconds, or a test hangs:
+If a distribution prompts for input or a test hangs:
 1. Copy the name of the distribution
 2. Shell into the container and run `/root/kill-laggards` to skip the install
-3. Add the distribution to `root/.cpan/prefs/01.DISABLED.yml`
-4. Copy the updated file into the container, incase another distribution cites it as a dependency: `docker cp root/.cpan/prefs/01.DISABLED.yml $PID:/root/.cpan/prefs/01.DISABLED.yml`
+3. Add the distribution to `/root/.cpan/prefs/01.DISABLED.yml`
 
 
 Copyright 2021 David Farrell

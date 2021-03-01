@@ -1,0 +1,13 @@
+#!/bin/bash
+perl -MCPAN -e 'CPAN::Shell->notest("install", "CPAN")'
+perl -MCPAN -e 'CPAN::Shell->notest("install", "CPAN::SQLite")'
+perl -MCPAN -e 'CPAN::Shell->notest("install", "CPAN::Reporter")'
+perl -MCPAN -e 'CPAN::Shell->notest("install", "ExtUtils::CBuilder")'
+perl -MCPAN -e 'CPAN::Shell->notest("install", "Module::Build")'
+perl -MCPAN -e 'CPAN::Shell->notest("install", "Archive::Tar")'
+perl -MCPAN -e 'CPAN::Shell->notest("install", "YAML")'
+perl -MCPAN -e 'CPAN::Shell->notest("install", "YAML::Syck")'
+perl -MCPAN -e 'CPAN::Shell->notest("install", "Test::Pod")'
+perl -MCPAN -e 'CPAN::Shell->notest("install", "Test::Pod::Coverage")'
+perl -MCPAN -e 'CPAN::Shell->notest("install", "Digest::SHA")'
+perl -MCPAN -e 'CPAN::Shell->notest("install", "version")'
