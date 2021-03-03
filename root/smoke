@@ -1,4 +1,4 @@
 #!/bin/bash
 while read MODULE <&3;do
-  cpan $MODULE
+  cpan $MODULE </dev/null
 done 3</root/modules.txt
