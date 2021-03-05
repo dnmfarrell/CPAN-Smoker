@@ -1,0 +1,139 @@
+commit 50350ef5772c40a5446cfb4b9b1ea28ac28b0323
+Author: David Farrell <davidnmfarrell@gmail.com>
+Date:   Fri Mar 5 09:13:26 2021 -0500
+
+    allow require to return false
+
+diff --git a/AUTHORS b/AUTHORS
+index 2136fb2104..6c330f52af 100644
+--- a/AUTHORS
++++ b/AUTHORS
+@@ -328,6 +328,7 @@ David D. Kilzer                <ddkilzer@lubricants-oil.com>
+ David Denholm                  <denholm@conmat.phys.soton.ac.uk>
+ David Dyck                     <david.dyck@fluke.com>
+ David F. Haertig               <dfh@dwroll.lucent.com>
++David Farrell                  <davidnmfarrell@gmail.com>
+ David Favor                    <david@davidfavor.com>
+ David Feldman                  <david.feldman@tudor.com>
+ David Fifield                  <david@bamsoftware.com>
+diff --git a/MANIFEST b/MANIFEST
+index 6fac691f4d..a998e92153 100644
+--- a/MANIFEST
++++ b/MANIFEST
+@@ -1514,12 +1514,10 @@ cpan/parent/t/lib/Dummy.pm			test files for parent.pm
+ cpan/parent/t/lib/Dummy/Outside.pm		test files for parent.pm
+ cpan/parent/t/lib/Dummy2.plugin			test files for parent.pm
+ cpan/parent/t/lib/FileThatOnlyExistsAsPMC.pmc	test files for parent.pm
+-cpan/parent/t/lib/ReturnsFalse.pm		test files for parent.pm
+ cpan/parent/t/parent.t				tests for parent.pm
+ cpan/parent/t/parent-classfromclassfile.t	tests for parent.pm
+ cpan/parent/t/parent-classfromfile.t		tests for parent.pm
+ cpan/parent/t/parent-pmc.t			tests for parent.pm
+-cpan/parent/t/parent-returns-false.t		tests for parent.pm
+ cpan/parent/t/rt62341.t.disabled		test files for parent.pm
+ cpan/Perl-OSType/lib/Perl/OSType.pm			Perl::OSType
+ cpan/Perl-OSType/t/OSType.t			Perl::OSType
+diff --git a/cpan/parent/t/lib/ReturnsFalse.pm b/cpan/parent/t/lib/ReturnsFalse.pm
+deleted file mode 100644
+index 41db2138a5..0000000000
+--- a/cpan/parent/t/lib/ReturnsFalse.pm
++++ /dev/null
+@@ -1,5 +0,0 @@
+-package ReturnsFalse;
+-
+-sub exclaim { "I CAN FROM " . __PACKAGE__ }
+-
+-0;
+diff --git a/cpan/parent/t/parent-returns-false.t b/cpan/parent/t/parent-returns-false.t
+deleted file mode 100644
+index 3eabf5377e..0000000000
+--- a/cpan/parent/t/parent-returns-false.t
++++ /dev/null
+@@ -1,26 +0,0 @@
+-#!/usr/bin/perl -w
+-BEGIN {
+-    if( $ENV{PERL_CORE} ) {
+-        chdir 't' if -d 't';
+-        chdir '../lib/parent';
+-        @INC = '..';
+-    }
+-}
+-
+-use strict;
+-use Test::More tests => 2;
+-use lib 't/lib';
+-
+-our $got_here;
+-
+-my $res = eval q{
+-    package MyTest;
+-
+-    use parent 'ReturnsFalse';
+-
+-    $main::got_here++
+-};
+-my $error = $@;
+-
+-is $got_here, undef, "The block did not run to its end.";
+-like $error, q{/^ReturnsFalse.pm did not return a true value at /}, "A module that returns a false value raises an error";
+diff --git a/pp_ctl.c b/pp_ctl.c
+index 3797ec434e..570188ca29 100644
+--- a/pp_ctl.c
++++ b/pp_ctl.c
+@@ -4553,7 +4553,6 @@ PP(pp_leaveeval)
+     U8 gimme;
+     PERL_CONTEXT *cx;
+     OP *retop;
+-    int failed;
+     CV *evalcv;
+     bool keep;
+ 
+@@ -4565,12 +4564,6 @@ PP(pp_leaveeval)
+     oldsp = PL_stack_base + cx->blk_oldsp;
+     gimme = cx->blk_gimme;
+ 
+-    /* did require return a false value? */
+-    failed =    CxOLD_OP_TYPE(cx) == OP_REQUIRE
+-             && !(gimme == G_SCALAR
+-                    ? SvTRUE_NN(*PL_stack_sp)
+-                    : PL_stack_sp > oldsp);
+-
+     if (gimme == G_VOID) {
+         PL_stack_sp = oldsp;
+         /* free now to avoid late-called destructors clobbering $@ */
+@@ -4596,8 +4589,8 @@ PP(pp_leaveeval)
+ #endif
+     CvDEPTH(evalcv) = 0;
+ 
+-    /* pop the CXt_EVAL, and if a require failed, croak */
+-    S_pop_eval_context_maybe_croak(aTHX_ cx, NULL, failed);
++    /* pop the CXt_EVAL */
++    S_pop_eval_context_maybe_croak(aTHX_ cx, NULL, 0);
+ 
+     if (!keep)
+         CLEAR_ERRSV();
+diff --git a/t/comp/require.t b/t/comp/require.t
+index c4889bba51..4d1fcb7099 100644
+--- a/t/comp/require.t
++++ b/t/comp/require.t
+@@ -128,14 +128,14 @@ write_file('bleah.pm', "print 'ok $i - require bleah.pm\n'; 1;\n");
+ require "bleah.pm";
+ $i++;
+ 
+-# run-time failure in require
++# run-time allow return false
+ do_require "0;\n";
+-print "# $@\nnot " unless $@ =~ /did not return a true/;
+-print "ok ",$i++," - require returning 0\n";
+-
+-print "not " if exists $INC{'bleah.pm'};
+-print "ok ",$i++," - %INC not updated\n";
++print "# $@\nnot " if $@;
++print "ok ",$i++," - require can return 0\n";
++print "not " unless exists $INC{'bleah.pm'};
++print "ok ",$i++," - %INC updated\n";
+ 
++%INC = ();
+ my $flag_file = 'bleah.flg';
+ # run-time error in require
+ for my $expected_compile (1,0) {
