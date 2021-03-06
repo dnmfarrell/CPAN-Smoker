@@ -1,0 +1,5 @@
+#!/bin/bash
+while true; do
+  find /root/.cpan/build/* -maxdepth 0 -mmin +60 -exec rm -rf '{}' \;
+  sleep 1h
+done;
