@@ -80,6 +80,7 @@ match:
     |BSCHMAL/parrot-0.6.0.tar.gz             # hangs during configure with 5.10
     |BSUGARS/IPC-Shareable-0.60.tar.gz       # hangs
     |CAIDAPERL/Chart-Graph-\d                # hangs Makefile.PL: RT 33541
+    |CANID/Data-RecordStore-6.04.tar.gz      # hangs
     |CEBJYRE/Task-BeLike-Cebjyre-\d          # hangs somewhere
     |CGUINE/Games-Sudoku-SudokuTk-\d         # hangs: seen with 0.07 and 0.09
     |CHSTROSS/NetServer-Generic-1.03.tar.gz  # hangs
@@ -288,6 +289,7 @@ match:
     |SUMPFRALL/Ezmlm-0.08.2                  # questions
     |SWALTERS/Acme-RPC-\d                    # hangs
     |TJENNESS/Chart-XMGR-0.95.tar.gz
+    |TJENNESS/Chart-GRACE-0.95.tar.gz        # hangs if unlisted dep PDL::Options IS installed
     |TLBDK/IO-EventMux-Socket-MsgHdr-0.02.tar.gz # hangs
     |TLBDK/IO-EventMux-                      # hangs
     |TOBYINK/App-perlrdf-0.006.tar.gz        # https://rt.cpan.org/Ticket/Display.html?id=99158
